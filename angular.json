@@ -7,12 +7,13 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "none",
+          "skipTests": false
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "me-page",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -30,9 +31,22 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/main.scss",
+              "node_modules/fontawesome-4.7/css/font-awesome.min.css",
+              "src/assets/css/aos.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/aos.js",
+              "src/assets/js/now-ui-kit.js",
+              "src/assets/js/plugins/nouislider.min.js",
+              "src/assets/js/plugins/jquery.sharrre.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +114,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ddcb41fc-f572-4200-bfb9-6c153a0ba094"
   }
 }

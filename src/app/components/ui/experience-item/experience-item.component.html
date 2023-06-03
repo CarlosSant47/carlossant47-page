@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="row">
+    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+      <div class="card-body cc-experience-header">
+        <p>{{experience.dateInit | date:'MMMM y'}} -
+          {{(experience.dateFinish === null ? 'current': experience.dateFinish |date:'MMMM y')}}</p>
+        <div class="h5">{{experience.company}}</div>
+      </div>
+    </div>
+    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+      <div class="card-body">
+        <div class="h5">{{experience.position}}</div>
+        <p>
+          {{experience.descripcion}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

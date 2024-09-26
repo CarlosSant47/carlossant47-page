@@ -1,0 +1,8 @@
+# Ignorar el archivo docker-compose.yml
+docker-compose.yml
+
+# Ignorar otros archivos y directorios innecesarios
+.git
+.gitignore
+node_modules
+.DS_Store
